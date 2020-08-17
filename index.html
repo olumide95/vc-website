@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+
+    <!-- Required meta tags -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>VerifyCustomerInfo.</title>
+    <!-- OpenGraph SEO meta tags -->
+
+    <meta content="website" property="og:type">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font awesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- Circular-std CSS -->
+    <link rel="stylesheet" href="css/circular-std.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .banner-img-3 img {
+            -webkit-transform: rotateY(0deg) !important;
+            transform: rotateY(0deg) !important;
+        }
+        
+        .banner-img-3 {
+            left: 5% !important;
+        }
+        
+        .btn-danger {
+            padding: 0.675rem 1.15rem;
+            margin: 0;
+        }
+        
+        .col-md-6.col-lg-4>.item-box {
+            height: 596px;
+        }
+        
+        .hero-title {
+            margin-left: 17px !important;
+        }
+        
+        @media screen and (min-width: 1400px) {
+            .hero-title {
+                margin-left: 0px !important;
+            }
+        }
+        
+        @media (min-width: 1200px) {}
+        /* ----------- iPad Pro ----------- */
+        /* Portrait and Landscape */
+        
+        @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+            .banner-img-3 img {
+                width: 390px;
+            }
+            .header__bg {
+                background-size: 500px;
+                background-position: calc(50% + 260px) 50%;
+            }
+            .main-home {
+                margin-left: 75px;
+            }
+            .hero-title>.add-btn.pricing-btn_wrap {
+                margin: 0;
+            }
+            .col-md-6.col-lg-4>.item-box {
+                height: 680px;
+            }
+            .navbar {
+                width: 960px;
+            }
+        }
+        /* Portrait */
+        
+        @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {}
+        /* Landscape */
+        
+        @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {}
+        
+        #featured-services .box {
+            padding: 0px !important;
+        }
+        
+        .main-title__alt {
+            margin-top: -1%;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+        
+        #featured-services {
+            margin-top: -3% !important;
+            position: inherit;
+            z-index: 200;
+        }
+        /* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+        
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            .main-title__alt {
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+            }
+        }
+        
+        .service-box {
+            position: relative;
+        }
+        
+        .service-box .service {
+            /*visiblity: hidden; */
+            display: none;
+            width: 300px !important;
+            height: 125px !important;
+            position: absolute;
+            top: -30px;
+            left: 70px;
+            margin-top: -100px;
+            /* approx adjustment for arrow */
+            margin-left: -50px;
+            /* approx adjustment for arrow */
+        }
+        
+        .service-box:hover .service {
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            display: block;
+            line-height: 20px;
+            padding: 8px;
+            font-size: 14px;
+            text-align: center;
+            z-index: 999;
+            color: #212529;
+            background: white;
+            border: 4px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+            box-shadow: #333 0px 0px 5px 0px;
+            -webkit-transition: opacity 100ms ease-in;
+            -o-transition: opacity 100ms ease-in;
+            -moz-transition: opacity 100ms ease-in;
+            transition: opacity 100ms ease-in;
+        }
+        
+        .service-box:hover .service p {
+            color: black !important;
+        }
+        
+        .service-box .service:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #ffffff transparent transparent;
+            top: 120px;
+            left: 90px;
+            transform: rotate(270deg);
+        }
+    </style>
+<script type="text/javascript">
+function add_chatinline(){ 
+    var hccid=98639583;
+    var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;
+    var ct=document.getElementsByTagName("script")[0];
+    ct.parentNode.insertBefore(nt,ct);
+    
+}
+add_chatinline(); 
+</script>
+   
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header>
+        <!-- Navbar -->
+        <div class="nav-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <h5> VerifyCustomerInfo.com </h5>
+                            <button class="navbar-toggler navbar-toggler_second" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-bars"></i>
+                                <!--  <span class="navbar-toggler-icon"></span> -->
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#about" tabindex="-1" aria-disabled="true"> About</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#solutions" tabindex="-2" aria-disabled="true">
+                                            Solutions</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#contact" tabindex="-2" aria-disabled="true">
+                                            Contact Us</a>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-map-marker-alt"></i> Lagos<span class="sr-only">(current)</span>
+                                        </a>
+                                        <!--- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>-->
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">+(234)
+                                            703 986 5808</a>
+                                    </li>
+                                    
+                                    <!---  <li class="nav-item active">
+                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Login</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Title -->
+        <div class="main-title__alt header__bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 main-home">
+                        <div class="hero-title  text-center  text-md-left">
+
+                            <!--<p>Hello, We are Fincorp</p>-->
+                            <h1>On-Demand<br> Information validation.</h1>
+                            <p>Nigeria’s first on-demand information validation <br>platform for individuals and businesses.
+                            </p>
+                            <div class="add-btn pricing-btn_wrap">
+                                <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Book
+                                    A Service</a>
+                            </div>
+
+                            <div class="add-btn pricing-btn_wrap">
+                                <a href="###" class="btn btn-danger chat">Chat with an Agent</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="main-banner_md">
+                            <img src="images/on-demand.png" class="img-fluid" alt="#">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-style d-none d-md-block">
+                <img src="images/bg-1.png" class="img-fluid" alt="#">
+            </div>
+        </div>
+        <!--// Main Title -->
+        <!--// Navbar -->
+
+
+        <!--  Contact Modal -->
+        <div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="phpcontactform" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+
+                        <form class="quote-form" action="php/contact.php" method="post" id="phpcontactform">
+                            <h5 class="text-center mt-3 mb-4">Get a Free Quote!</h5>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6"> <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name*" required> </div>
+                                    <div class="col-sm-6"> <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name*" required> </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="pac-input" name="address" placeholder="Address*" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100" id="js-contact-btn"><strong>
+                                    Get Free Quote
+                                </strong> </button>
+                            <div id="js-contact-result" data-success-msg="Success, We will get back to you soon" data-error-msg="Oops! Something went wrong"></div>
+
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--  // Contact Modal -->
+
+        <section id="featured-services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 box ">
+
+
+                        <div class="service-box">
+                            <h4 class="title">
+
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="item-icon  ">
+                                            <img src="images/life-insurance.svg" class="img-fluid" alt="#">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-8">
+                                        <div style="margin-top: 20%;"></div>
+                                        <a href="#">Insurance</a>
+                                        </br>
+
+
+                                    </div>
+                            </h4>
+                            <div class="service">
+                                <ul style="text-align: left;">
+
+
+                                    <li> <a href="#" data-toggle="modal" data-target="#contactmodal">
+                                        Auto Insurance</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#contactmodal">Property/Asset Insurance</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#contactmodal">Life Insurance KYC Verification</a></li>
+                                </ul>
+
+
+
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 box ">
+                            <div class="service-box">
+                                <h4 class="title">
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="item-icon  ">
+                                                <img src="images/brokerage.svg" class="img-fluid" alt="#">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <div style="margin-top: 20%;"></div>
+                                            <a href="#">Banks & Other Financial Services</a>
+                                        </div>
+                                    </div>
+
+                                </h4>
+                                <div class="service">
+                                    <ul style="text-align: left;">
+                                        <li> <a href="#" data-toggle="modal" data-target="#contactmodal">KYC Data Verification</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#contactmodal">Credit Application Information Verification</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#contactmodal">Collateral Verification</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 box ">
+                            <div class="service-box">
+                                <h4 class="title">
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="item-icon  ">
+                                                <img src="images/small.svg" class="img-fluid" alt="#">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <div style="margin-top: 20%;"></div>
+                                            <a href="#">SME & Individual</a>
+                                        </div>
+                                    </div>
+
+
+                                </h4>
+                                <div class="service">
+                                    <ul style="text-align: left;">
+                                        <li> <a href="#" data-toggle="modal" data-target="#contactmodal">Staff Data Verification</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#contactmodal">Employee Loan/Credit Application Information Verification</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#contactmodal">Tenant Application Information Verification</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 box ">
+                            <h4 class="title">
+
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="item-icon  ">
+                                            <img src="images/business-insurance.svg" class="img-fluid" alt="#">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-8">
+                                        <div style="margin-top: 20%;"></div>
+                                        <a href="#" data-toggle="modal" data-target="#contactmodal">Pension & Annuity</a>
+                                    </div>
+                                </div>
+
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!--==================== NEW INSURANCE ====================-->
+        <div class="space bg-image" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center-title">
+                            <h2>A new take on Information Verification.</h2>
+                            <p>Verify and validate information anytime, anywhere in Nigeria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-7 ml-auto">
+                        <div class="insurance-title_wrap insurance-title_wrap2">
+                            <h5> Validate, Verify, Engage. </h5>
+                            <h6>Great for individuals and businesses.</h6>
+                            <p class="insurance-para">VerifyCustomerInfo enables businesses and individuals leverage our tailored business application to gather and validate information anytime, anywhere. The information gathered helps improve knowledge gathered about the risk
+                                profile of the customer, mitigating certain risks. This can be done from our website or our application.</p>
+                            <div class="insurance-type d-flex align-items-center">
+                                <img src="images/tick.png" alt="#">
+                                <div class="insurance-type_title">
+                                    <h6>Independent and verifiable data collection</h6>
+                                    <p>Data Gathering for you..</p>
+                                </div>
+                            </div>
+                            <div class="insurance-type d-flex align-items-center">
+                                <img src="images/tick.png" alt="#">
+                                <div class="insurance-type_title">
+                                    <h6>Inspection Integrity</h6>
+                                    <p>Our Professional verification teams, save your time for traveling and minimize the risk..
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="insurance-type d-flex align-items-center">
+                                <img src="images/tick.png" alt="#">
+                                <div class="insurance-type_title">
+                                    <h6>Custom Solutions</h6>
+                                    <p>We offer customized solutions that integrate with your verification processes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-img-3">
+                <img src="images/report-laptop-phone.jpg" width="680" class="img-fluid" alt="#">
+            </div>
+            <!----  <div class="bg-style2">
+                <img src="images/bg-2.png" class="img-fluid" alt="#">
+            </div>-->
+        </div>
+        <!--//END NEW INSURANCE -->
+    </header>
+    <!--//END HEADER -->
+    <!--==================== CHOOSE YOUR INSURANCE ====================-->
+    <section class="space bg-light" id="solutions">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center-title">
+                        <h2>Our Solutions</h2>
+                        <p>Flexible and customized to meet your need</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="item-box">
+                        <div class="item-icon">
+                            <img src="images/home-insurance.svg" class="img-fluid" alt="#">
+                        </div>
+                        <h6>Property/Asset</h6>
+                        <br>
+                        <p>We work with the Underwriter of Financial Organization to inspect, verify and validate assets listed for Home/Householder Insurance, Fire Insurance, and Burglary (Content) Insurance.
+                        </p>
+                        <br><br><br>
+                        <div class="add-btn pricing-btn_wrap">
+                            <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Book A
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="item-box">
+                        <div class="item-icon">
+                            <img src="images/car-insurance.svg" class="img-fluid" alt="#">
+                        </div>
+                        <h6>Auto & Fleet</h6>
+                        <br>
+                        <p>We understand the importance of vehicle inspection in order to aid seamless underwriting, claims experience and reduce the incidence of insurance fraud. Our team of professionals are working with requirements defined by vehicle
+                            insurance professionals.</p>
+                        <br>
+                        <div class="add-btn pricing-btn_wrap">
+                            <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Book A
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="item-box">
+                        <div class="item-icon  ">
+                            <img src="images/life-insurance.svg" class="img-fluid" alt="#">
+                        </div>
+                        <h6>Life Insurance KYC Verification</h6>
+
+                        <p>We verify and validate the customer details (KYC Info) provided by Customers and Agents, our team also help confirm customer understanding of the policy purchased.</p>
+                        <br><br><br>
+                        <div class="add-btn pricing-btn_wrap">
+                            <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Book A
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="item-box">
+                        <div class="item-icon  ">
+                            <img src="images/business-insurance.svg" class="img-fluid" alt="#">
+                        </div>
+                        <h6>Pension & Annuity KYC and Payment Verification</h6>
+
+                        <p>The Burden of proof of Life is relieved by utilizing available bio-data and bio-metrics info to confirm the status of pensioners or annuitants. We also work with the Organization to update customer records.
+                        </p>
+                        <br>
+                        <div class="add-btn pricing-btn_wrap">
+                            <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Book A
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="item-box">
+                        <div class="item-icon  ">
+                            <img src="images/brokerage.svg" class="img-fluid" alt="#">
+                        </div>
+                        <h6>BANKS & OTHER FINANCIAL SERVICES</h6>
+                        <br>
+                        <p> Customer due diligence is both driven by operational and regulatory requirements.<br> We take care of the following: KYC Data Verification, Credit Application Information Verification,Collateral Verification</p>
+
+                        <br>
+                        <div class="add-btn pricing-btn_wrap">
+                            <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Book A
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="item-box">
+                        <div class="item-icon  ">
+                            <img src="images/small.svg" class="img-fluid" alt="#">
+                        </div>
+                        <h6>SME & INDIVIDUAL SERVICES</h6>
+                        <br>
+                        <p>As Individuals and small business owners, there are several partnerships and agreements where a third eye would help.<br> We helps with verifying : Employee Data, Loan/Credit Application Data, Tenant Application Data, Partnership
+                            Agreement Data </p>
+                        <div class="add-btn pricing-btn_wrap" style="margin: -7px 0 0;">
+                            <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Book A
+                                Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// END CHOOSE YOUR INSURANCE -->
+    <!--==================== EASY CLAIMS ====================-->
+    <section class="space">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center-title">
+                        <h2>How it Works</h2>
+                        <p>Easy as One, Two, Three</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="item-box howit-block">
+                        <div class="item-icon color1">
+                            <span>1</span>
+                        </div>
+                        <h6>Request Verification</h6>
+                        <p>Request for a verification service.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="item-box howit-block_af">
+                        <div class="item-icon color2">
+                            <span>2</span>
+                        </div>
+                        <h6>We Verify</h6>
+                        <p>We send out our team to verify.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="item-box">
+                        <div class="item-icon color3">
+                            <span>3</span>
+                        </div>
+                        <h6>We Report</h6>
+                        <p>You get a report after inspection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// END EASY CLAIMS -->
+    <!--==================== TESTIMONIAL ====================
+    <section class="testimonial">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-12 col-lg-7 align-items-center">
+                    <div class="testi-content_block">
+                        <img src="images/quote.png" class="img-fluid" alt="#">
+                        <h3>I need to understand what’s going on – it’s my health and I want to feel secure in it. With my previous health insurance, I didn’t know how any of it worked.</h3>
+                        <span>Matthew Young</span>
+                        <p>Legal Consultant, United States</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testi-img_wrap">
+            <img src="images/testi-img.png" class="img-fluid" alt="#" width="650">
+        </div>
+      <div class="bg-img3"><img src="images/bg-image3.png" class="img-fluid" alt="#"></div> 
+    </section>
+  //END TESTIMONIAL -->
+    <!--==================== ADD ====================
+    <section class="add-section clearfix">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="add-box">
+                        <img src="images/shield-yellow.svg" class="img-fluid shield" alt="#">
+                        <div class="add-content">
+                            <h3> 100% Satisfaction Guarantee</h3>
+                            <p>We offer no questions asked refund policy for 14 days from the policy date.</p>
+                        </div>
+                        <div class="add-btn">
+                            <a href="#" data-toggle="modal" data-target="#contactmodal" class="btn btn-success">Get
+                                your free Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//END ADD -->
+    <!--==================== PRICING ====================
+    <section class="pricing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center-title">
+                        <h2>Honest Pricing</h2>
+                        <p>Simple & honest pricing. No hidden fees. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row pricing-wrap">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="pricing-block">
+                            <h6 class="primary">BASIC</h6>
+                            <div class="pricing-high">
+                                <div class="pricing-icon color3">
+                                    <h2><span>$</span>9</h2>
+                                </div>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Rapidiously strategize value</p>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Progressively visualize leadership </p>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Equity invested supply chains. </p>
+                            </div>
+                            <div class="add-btn pricing-btn_wrap">
+                                <a href="#" class="btn btn-success">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="pricing-block pricing-block_middle">
+                            <h6 class="secondary">PROFESSIONAL</h6>
+                            <span class="save-price">Save 20%</span>
+                            <div class="star-middle">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="pricing-high">
+                                <div class="pricing-icon color7">
+                                    <h2><span>$</span>19</h2>
+                                </div>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Rapidiously strategize value</p>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Progressively visualize leadership </p>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Equity invested supply chains</p>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Proactively leverage</p>
+                            </div>
+                            <div class="add-btn pricing-btn_wrap">
+                                <a href="#" class="btn btn-warning">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="pricing-block">
+                            <h6 class="tertiary">PREMIUM</h6>
+                            <div class="pricing-high">
+                                <div class="pricing-icon color1">
+                                    <h2><span>$</span>49</h2>
+                                </div>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Rapidiously strategize value</p>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Progressively visualize leadership </p>
+                            </div>
+                            <div class="pricing-text">
+                                <i class="fas fa-check"></i>
+                                <p>Equity invested supply chains. </p>
+                            </div>
+                            <div class="add-btn pricing-btn_wrap">
+                                <a href="#" class="btn btn-primary">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pricing-bottom_text">
+                        <p>*Prices shown per month if paid annually</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-bg pricing-bg_secong">
+            <img src="images/bg-image4.png" class="img-fluid" alt="#">
+        </div>
+    </section>
+    <!--//END PRICING -->
+    <!--==================== CONTENT SECTION ====================
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content-box content-box1">
+                        <h5>Which are the network hospitals in your vicinity?</h5>
+                        <p>To avail a cashless settlement of your claim, you should be admitted in a network hospital. A company has a list of such hospitals and you need to find out whether the hospital in the company’s network is your preferred choice
+                            of hospital and/or located in your area.</p>
+                    </div>
+                    <div class="content-box">
+                        <h5>What are the documents required for claiming?</h5>
+                        <p>A pre-authorization form is required in case of cashless claims which are to be submitted to the TPA. Other documents might also be required and you should have the knowledge of the required documents.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-box content-box1">
+                        <h5>Will I get covered for my pre-existing illnesses?</h5>
+                        <p>Every insurer excludes coverage on the pre-existing illnesses for certain tenure at the starting of the policy. You need to find out what this waiting period for your pre-existing illness is and how soon can you be covered for
+                            your pre-existing illnesses. </p>
+                    </div>
+                    <div class="content-box">
+                        <h5>Is maternity covered in health insurance policies?</h5>
+                        <p>No. As health insurance policy is designed to cover unforeseen medical expenses a normal health insurance policy does not cover maternity expenses. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//END CONTENT SECTION -->
+    <!--==================== ADD ====================-->
+    <section class="add-section clearfix collapse-wrap" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="add-box">
+                        <img src="images/shield-green.svg" class="img-fluid shield" alt="#">
+                        <div class="add-content">
+                            <h3> Information Verification Made Easy</h3>
+                            <p>we are committed to provide top-notch services to our customers. Have any question?</p>
+                        </div>
+                        <div class="add-btn">
+                            <a href="###" class="btn btn-danger chat">Chat with our Agent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//END ADD -->
+    <!--==================== FOOTER ====================-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-title">
+                        <h6>SOLUTIONS</h6>
+                        <ul>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">Banks & Other Financial Services</a></li>
+                            <li><a href="#">SME & Individual Services</a></li>
+                            <li><a href="#">Pension & Annuity</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-title">
+                        <h6>ADDRESS</h6>
+
+                         90 Olonode Street, Alagomeji, Yaba, Lagos.<br>+(234) 703 986 5808<br> info@verifycustomerinfo.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-title">
+                        <h6>FOLLOW US</h6>
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        <p>Copyright © 2019. VCI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--//END FOOTER -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Contact js -->
+    <script src="js/validate.js"></script>
+    <script src="js/contact.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".chat").click(function() {
+                $(".mylivechat_collapsed").click();
+            });
+
+
+            $('.box').hover(function() {
+
+                $(this).toggleClass('box-bg');
+            });
+
+
+        });
+
+        $(document).on('click', 'a[href^="#"]', function(e) {
+            e.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 1000, 'linear');
+        });
+    </script>
+</body>
+
+</html>
